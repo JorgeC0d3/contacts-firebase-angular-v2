@@ -1,0 +1,21 @@
+<div class="col">
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="d-flex align-items-center"><span class="material-icons">person</span>{{contact.fullName}}</h5>
+            <small class="d-flex align-items-center"><span class="material-icons">email</span>{{contact.email}}</small>
+            <small class="d-flex align-items-center"><span
+                    class="material-icons">phone</span>{{contact.phoneNumber}}</small>
+            <hr>
+            <small class="d-flex align-items-center"><span
+                    class="material-icons">description</span>{{contact.description}}</small>
+        </div>
+        <div class="card-footer">
+            <div class="d-flex justify-content-end align-items-center">
+                <button type="button" class="btn btn-outline-light btn-sm mx-1" (click)="onEditContact(contact)"><span
+                        class="material-icons">edit</span></button>
+                <button type="button" class="btn btn-outline-light btn-sm mx-1" (click)="onDeleteContact(contact)"><span
+                        class="material-icons">delete</span></button>
+            </div>
+        </div>
+    </div>
+</div>

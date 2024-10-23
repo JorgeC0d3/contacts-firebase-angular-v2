@@ -1,0 +1,35 @@
+<div class="container mt-5">
+    <h3 class="text-center mb-5">Lista de contactos</h3>
+
+    <div class="row row-cols-sm-1 row-cols-md-3 row-cols-lg-4">
+        <!--  El pipe async se usa para suscribirse automáticamente a un observable y obtener los datos. -->
+        @for(contact of contacts$ | async; track contact.id){
+            <app-contact-card [contact]="contact" (deleteContact)="deleteContact($event)" (editContact)="editContact($event)"/>
+        }
+    </div>
+
+    <!-- Toast Bootstrap -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="successToastDelete" class="toast align-items-center text-white bg-success border-0" role="alert"
+            aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    Contacto eliminado con éxito.
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+        </div>
+
+        <div id="errorToastDelete" class="toast align-items-center text-white bg-danger border-0" role="alert"
+            aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    Error al eliminar el contacto.
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'material-design-icons-iconfont/dist/material-design-icons.css';
+
+body {
+    background-color: #000000;
+    color: #ededed;
+}
+
+.card{
+    background-color: #000000;
+    color: #ededed;
+    border-width: 1px;
+    border-color: #ededed;
+}
+
+.material-icons{
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: #ededed;
+}
+
+a:hover{
+    color: #b6b6b6;
+}
